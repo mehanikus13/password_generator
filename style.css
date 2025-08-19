@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: #2c3e50; /* Dark background */
+    color: #ecf0f1; /* Light text */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,17 +10,17 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #34495e; /* Lighter container background */
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 500px;
 }
 
 h1 {
     text-align: center;
-    color: #2c3e50;
+    color: #ecf0f1;
     margin-bottom: 1.5rem;
 }
 
@@ -32,24 +32,26 @@ h1 {
 #password-display {
     flex-grow: 1;
     padding: 0.75rem;
-    border: 1px solid #dcdcdc;
-    border-radius: 4px 0 0 4px;
+    border: 1px solid #95a5a6;
+    border-radius: 25px 0 0 25px; /* Rounded corner */
     font-size: 1.1rem;
-    background-color: #f9f9f9;
+    background-color: #fff; /* White input field */
+    color: #2c3e50; /* Dark text for input */
+    padding-left: 20px;
 }
 
 #copy-btn {
     padding: 0.75rem 1rem;
-    border: 1px solid #3498db;
-    background-color: #3498db;
+    border: 1px solid #e67e22;
+    background-color: #e67e22; /* Orange control */
     color: white;
     cursor: pointer;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 25px 25px 0; /* Rounded corner */
     transition: background-color 0.3s;
 }
 
 #copy-btn:hover {
-    background-color: #2980b9;
+    background-color: #d35400; /* Darker orange on hover */
 }
 
 .options {
@@ -75,31 +77,65 @@ h1 {
 .length-controls button {
     width: 30px;
     height: 30px;
-    border: 1px solid #ccc;
-    background-color: #f0f0f0;
+    border: 1px solid #95a5a6;
+    background-color: #bdc3c7;
+    color: #2c3e50;
     cursor: pointer;
+    border-radius: 50%; /* Fully rounded */
 }
 
 #length {
     flex-grow: 1;
     margin: 0 0.5rem;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #95a5a6;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    border-radius: 5px;
 }
+
+#length:hover {
+    opacity: 1;
+}
+
+#length::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #e67e22; /* Orange slider thumb */
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#length::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #e67e22; /* Orange slider thumb */
+    cursor: pointer;
+    border-radius: 50%;
+}
+
 
 #generate-btn, #generate-multiple-btn {
     width: 100%;
     padding: 0.8rem;
     font-size: 1.1rem;
-    background-color: #2ecc71;
+    background-color: #e67e22; /* Orange control */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 25px; /* Rounded corners */
     cursor: pointer;
     transition: background-color 0.3s;
     margin-bottom: 1rem;
 }
 
 #generate-btn:hover, #generate-multiple-btn:hover {
-    background-color: #27ae60;
+    background-color: #d35400; /* Darker orange on hover */
 }
 
 .multi-password-container {
@@ -114,8 +150,8 @@ h1 {
     word-break: break-all;
     max-height: 200px;
     overflow-y: auto;
-    background-color: #f9f9f9;
+    background-color: #2c3e50; /* Dark background for grid */
     padding: 1rem;
-    border-radius: 4px;
-    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    border: 1px solid #95a5a6;
 }
