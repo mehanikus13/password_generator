@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор паролей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Генератор паролей</h1>
+
+        <div class="password-display-container">
+            <input type="text" id="password-display" readonly>
+            <button id="copy-btn">Копировать</button>
+        </div>
+
+        <div class="options">
+            <div class="option">
+                <label for="length">Длина пароля: <span id="length-value">12</span></label>
+                <div class="length-controls">
+                    <button id="decrement-length">-</button>
+                    <input type="range" id="length" min="4" max="64" value="12">
+                    <button id="increment-length">+</button>
+                </div>
+            </div>
+
+            <div class="option">
+                <label><input type="checkbox" id="lowercase" checked> Строчные (a-z)</label>
+            </div>
+            <div class="option">
+                <label><input type="checkbox" id="uppercase" checked> Заглавные (A-Z)</label>
+            </div>
+            <div class="option">
+                <label><input type="checkbox" id="numbers" checked> Числа (0-9)</label>
+            </div>
+            <div class="option">
+                <label><input type="checkbox" id="symbols" checked> Символы (!@#$%^&*)</label>
+            </div>
+
+            <div class="option">
+                <label><input type="checkbox" id="exclude-repetition"> Исключать повторение</label>
+            </div>
+            <div class="option">
+                <label><input type="checkbox" id="exclude-ambiguous"> Исключить похожие символы (1, l, I, 0, O)</label>
+            </div>
+        </div>
+
+        <button id="generate-btn">Сгенерировать пароль</button>
+
+        <div class="multi-password-container">
+            <button id="generate-multiple-btn">Сгенерировать несколько паролей</button>
+            <div id="multi-password-display" class="passwords-grid"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
