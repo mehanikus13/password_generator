@@ -1,0 +1,8 @@
+.git
+node_modules
+Dockerfile.caddy
+Caddyfile
+docker-compose.yml
+README.md
+README_DEPLOY.md
+.DS_Store
