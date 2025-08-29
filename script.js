@@ -56,11 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Copy button
     copyBtn.addEventListener('click', () => {
-        if (passwordDisplay.value) {
+        if (passwordDisplay.value && !copyBtn.classList.contains('copied')) {
             navigator.clipboard.writeText(passwordDisplay.value);
-            copyBtn.textContent = 'Скопировано!';
+
+            copyBtn.classList.add('copied');
+
             setTimeout(() => {
-                copyBtn.textContent = 'Копировать';
+                copyBtn.classList.remove('copied');
             }, 2000);
         }
     });
