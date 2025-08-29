@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.eggs/
+*.egg-info/
+*.egg
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Jules's temporary files
+jules-scratch/
+.cache/
